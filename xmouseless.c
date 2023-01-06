@@ -127,6 +127,10 @@ void scroll(float x, float y) {
 }
 
 void init_x() {
+
+    /* Send Notification */
+    system("notify-send -t 2000 'xmouseless enabled'");
+
     int i;
     int screen;
 
@@ -158,6 +162,9 @@ void close_x(int exit_status) {
     XAutoRepeatOn(dpy);
     XUngrabKey(dpy, AnyKey, AnyModifier, root);
     XCloseDisplay(dpy);
+
+    system("notify-send -t 2000 'xmouseless disabled'");
+
     exit(exit_status);
 }
 
