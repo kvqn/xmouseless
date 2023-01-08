@@ -13,7 +13,7 @@ static SpeedBinding speed_bindings[] = {
     /* { XK_Super_L,      3000 }, */
     { XK_Alt_L,        1500 },
     /* { XK_a,            100  }, */
-    { XK_Control_L,    10   },
+    { XK_Control_L,    100   },
 };
 
 /* moves the mouse pointer
