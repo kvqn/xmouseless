@@ -9,6 +9,7 @@ PREFIX = /usr/local
 SRC = xmouseless.c
 BIN = xmouseless
 
+
 all: $(BIN)
 
 $(BIN): $(SRC) config.h
@@ -24,3 +25,7 @@ install: all
 
 uninstall:
 	rm -f $(PREFIX)/bin/$(BIN)
+
+update:
+	make all
+	sudo make install
